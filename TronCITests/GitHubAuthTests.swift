@@ -25,7 +25,6 @@ class GitHubAuthTests: XCTestCase {
                     XCTAssertEqual("v1.1f699f1069f60xxx", user.token)
                     XCTAssertEqual("LuisMDeveloper", user.username)
             }
-            XCTAssertNotNil(result, "No server response.")
             tokenExpectation.fulfill()
         }
         
