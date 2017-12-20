@@ -12,7 +12,10 @@
 		C1150BAF1FEA26E500CD0C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1150BAD1FEA26E500CD0C2D /* Main.storyboard */; };
 		C1150BB11FEA26E500CD0C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1150BB01FEA26E500CD0C2D /* Assets.xcassets */; };
 		C1150BB41FEA26E500CD0C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1150BB21FEA26E500CD0C2D /* LaunchScreen.storyboard */; };
-		C1150BBF1FEA26E500CD0C2D /* TronCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1150BBE1FEA26E500CD0C2D /* TronCITests.swift */; };
+		C1150BCA1FEA27FE00CD0C2D /* GitHubAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1150BC91FEA27FE00CD0C2D /* GitHubAuthTests.swift */; };
+		C1150BCE1FEA2CC000CD0C2D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1150BCD1FEA2CC000CD0C2D /* AuthService.swift */; };
+		C1150BD31FEA2E5400CD0C2D /* GitHubAuthServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1150BCF1FEA2CF500CD0C2D /* GitHubAuthServiceMock.swift */; };
+		C1150BD51FEA3E4700CD0C2D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1150BD41FEA3E4700CD0C2D /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,11 @@
 		C1150BB31FEA26E500CD0C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1150BB51FEA26E500CD0C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1150BBA1FEA26E500CD0C2D /* TronCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TronCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1150BBE1FEA26E500CD0C2D /* TronCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronCITests.swift; sourceTree = "<group>"; };
 		C1150BC01FEA26E500CD0C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1150BC91FEA27FE00CD0C2D /* GitHubAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthTests.swift; sourceTree = "<group>"; };
+		C1150BCD1FEA2CC000CD0C2D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C1150BCF1FEA2CF500CD0C2D /* GitHubAuthServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthServiceMock.swift; sourceTree = "<group>"; };
+		C1150BD41FEA3E4700CD0C2D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,14 @@
 		C1150BA81FEA26E400CD0C2D /* TronCI */ = {
 			isa = PBXGroup;
 			children = (
+				C1150BDB1FEA420D00CD0C2D /* Resources */,
+				C1150BDA1FEA41F000CD0C2D /* Utility */,
+				C1150BD91FEA415D00CD0C2D /* Contracts */,
+				C1150BD81FEA413500CD0C2D /* Mocks */,
 				C1150BA91FEA26E400CD0C2D /* AppDelegate.swift */,
 				C1150BAB1FEA26E400CD0C2D /* ViewController.swift */,
 				C1150BAD1FEA26E500CD0C2D /* Main.storyboard */,
-				C1150BB01FEA26E500CD0C2D /* Assets.xcassets */,
 				C1150BB21FEA26E500CD0C2D /* LaunchScreen.storyboard */,
-				C1150BB51FEA26E500CD0C2D /* Info.plist */,
 			);
 			path = TronCI;
 			sourceTree = "<group>";
@@ -90,10 +98,43 @@
 		C1150BBD1FEA26E500CD0C2D /* TronCITests */ = {
 			isa = PBXGroup;
 			children = (
-				C1150BBE1FEA26E500CD0C2D /* TronCITests.swift */,
 				C1150BC01FEA26E500CD0C2D /* Info.plist */,
+				C1150BC91FEA27FE00CD0C2D /* GitHubAuthTests.swift */,
 			);
 			path = TronCITests;
+			sourceTree = "<group>";
+		};
+		C1150BD81FEA413500CD0C2D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C1150BCF1FEA2CF500CD0C2D /* GitHubAuthServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C1150BD91FEA415D00CD0C2D /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				C1150BCD1FEA2CC000CD0C2D /* AuthService.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		C1150BDA1FEA41F000CD0C2D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C1150BD41FEA3E4700CD0C2D /* Result.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C1150BDB1FEA420D00CD0C2D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1150BB51FEA26E500CD0C2D /* Info.plist */,
+				C1150BB01FEA26E500CD0C2D /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1150BAC1FEA26E400CD0C2D /* ViewController.swift in Sources */,
+				C1150BD51FEA3E4700CD0C2D /* Result.swift in Sources */,
 				C1150BAA1FEA26E400CD0C2D /* AppDelegate.swift in Sources */,
+				C1150BCE1FEA2CC000CD0C2D /* AuthService.swift in Sources */,
+				C1150BD31FEA2E5400CD0C2D /* GitHubAuthServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1150BBF1FEA26E500CD0C2D /* TronCITests.swift in Sources */,
+				C1150BCA1FEA27FE00CD0C2D /* GitHubAuthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
